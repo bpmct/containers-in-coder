@@ -12,4 +12,4 @@ workspace:
   configure:
     start:
       - name: "Auto open the project"
-        command: mkdir -p containers-in-coder && timeout 5 /opt/coder/code-server/bin/code-server containers-in-coder
+        command: mkdir -p containers-in-coder && timeout 10 /opt/coder/code-server/bin/code-server -r containers-in-coder
