@@ -11,10 +11,5 @@ workspace:
     disk: 10
   configure:
     start:
-      - name: "Example step"
-        command: echo "Welcome to your Coder workspace!"
-  devURLs:
-    - name: dev
-      port: 3000
-      scheme: http
-      access: private
+      - name: "Start mysql and tomcat"
+        command: cd containers-in-coder && docker-compose up --detach
