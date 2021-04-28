@@ -11,6 +11,8 @@ workspace:
     disk: 10
   configure:
     start:
+      - name: "Add github.com to known_hosts"
+        command: ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
       - name: "Set default folder"
         command: curl https://gist.githubusercontent.com/bpmct/b48b99007284444eea94fe9e96d4a329/raw/set_first_dir.sh | sh
         env:
