@@ -6,8 +6,8 @@ workspace:
   spec:
     image: bencdr/containers:stable # Rename to the same as your image
     container-based-vm: true
-    cpu: 2
-    memory: 4
+    cpu: 3
+    memory: 6
     disk: 10
   configure:
     start:
