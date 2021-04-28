@@ -5,6 +5,7 @@ Launch a Coder workspace that includes:
 * Docker
 * docker-compose
 * Sample project with tomcat and mysql containers (uses [dmulligan/docker-example-tomcat-mysql](https://github.com/dmulligan/docker-example-tomcat-mysql))
+* The tomcat and mysql images cached/pre-pulled for faster startup on `docker-compose up`
 
 ## To start:
 
