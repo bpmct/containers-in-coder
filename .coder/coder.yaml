@@ -11,5 +11,5 @@ workspace:
     disk: 10
   configure:
     start:
-      - name: "Start mysql and tomcat"
-        command: cd containers-in-coder && docker-compose up --detach
+      - name: "Auto open the project"
+        command: mkdir -p containers-in-coder && /opt/coder/code-server/bin/code-server -r containers-in-coder
