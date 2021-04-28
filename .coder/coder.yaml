@@ -12,6 +12,6 @@ workspace:
   configure:
     start:
       - name: "Set default folder"
-        command: |
-          curl https://gist.githubusercontent.com/bpmct/b48b99007284444eea94fe9e96d4a329/raw/set_first_dir.sh | \
-            PROJECT_FOLDER=/home/coder/containers-in-coder sh
+        env:
+          PROJECT_FOLDER: /home/coder/containers-in-coder
+        command: curl https://gist.githubusercontent.com/bpmct/b48b99007284444eea94fe9e96d4a329/raw/set_first_dir.sh | sh
