@@ -1,12 +1,12 @@
 db:
-  image: mysql:8.0.24
+  image: mysql:5.7
   environment:
     MYSQL_ROOT_PASSWORD: nimda
     MYSQL_DATABASE: example_db
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
-   ports:
-     - "3306:3306"
+  ports:
+    - "3306:3306"
   volumes:
     - ./db:/docker-entrypoint-initdb.d
 
@@ -17,6 +17,10 @@ web:
     JDBC_URL: jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
     JDBC_USER: example_db_user
     JDBC_PASS: example_db_pass
+    MYSQL_ROOT_PASSWORD: nimda
+    MYSQL_DATABASE: example_db
+    MYSQL_USER: example_db_user
+    MYSQL_PASSWORD: example_db_pass
   ports:
     - "80:8080"
   volumes:
