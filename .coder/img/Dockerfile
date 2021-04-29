@@ -11,7 +11,7 @@ RUN sudo chmod +x /usr/local/bin/docker-compose
 
 # Cache images for fast start time inside the workspaces
 RUN dockerd & sleep 5 && \ 
-    docker pull 5.7.33 && \
+    docker pull mysql:5.7.33 && \
     docker pull tomcat:7.0.72
 
 USER coder
